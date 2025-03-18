@@ -18,68 +18,68 @@
 
         .container {
             background-color: #ffffff;
-            padding: 160px;
-            border-radius: 80px;
+            padding: 40px; /* Se reduce el padding en pantallas pequeñas */
+            border-radius: 20px; /* Bordes ajustados */
             box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
-            width: 150%; /* Ajustar para que el contenido no exceda del contenedor */
-            height: 100px;
+            width: 80%; /* Ancho flexible */
             max-width: 700px;
             animation: fadeIn 2s;
             display: flex; /* Usamos flexbox */
-            align-items: center; /* Alineación vertical */
-            gap: 30px; /* Espacio entre elementos */
+            align-items: center;
+            gap: 20px; /* Espacio entre elementos */
+            flex-wrap: wrap; /* Permite que los elementos se ajusten */
         }
 
         .logo {
-            max-width: 350px; /* Tamaño ajustado para mantener proporción */
+            max-width: 150px; /* Tamaño más pequeño para pantallas pequeñas */
             height: auto;
-            margin-left: -130px; /* Mueve el logo más a la izquierda */
+            margin-left: 0; /* Elimina margen negativo para evitar desplazamiento */
         }
 
         .content {
-            flex: 1; /* El contenido ocupará el resto del espacio */
-            text-align: left; /* Alinear texto a la izquierda */
-            display: flex; /* Flexbox para los botones */
-            flex-direction: column; /* Elementos en columna para texto */
-            gap: 20px; /* Espacio entre bloques de contenido */
+            flex: 1; 
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .buttons {
-            display: flex; /* Flexbox para alinear los botones en fila */
-            justify-content: flex-start; /* Alineación a la izquierda */
-            gap: 15px; /* Espaciado entre los botones */
+            display: flex;
+            flex-wrap: wrap; /* Botones se ajustan a nueva línea si es necesario */
+            gap: 10px; /* Espaciado entre botones */
+            justify-content: center; /* Centra los botones en pantallas pequeñas */
         }
 
-
         h1 {
-    font-size: 36px; /* Tamaño del título */
-    margin-bottom: 5px; /* Reduce espacio debajo del título */
-}
+            font-size: 24px; /* Ajusta tamaño del título en dispositivos pequeños */
+            margin-bottom: 5px;
+        }
 
-p {
-    font-size: 18px; /* Tamaño del texto */
-    margin: 5px 0; /* Reduce espacio arriba y abajo del párrafo */
-}
+        p {
+            font-size: 16px; /* Reduce tamaño del texto */
+            margin: 5px 0;
+        }
 
-ul {
-    font-size: 18px; /* Tamaño de los elementos de la lista */
-    margin: 5px 0; /* Reduce espacio entre la lista y otros elementos */
-    padding: 0; /* Elimina sangría inicial de la lista */
-}
+        ul {
+            font-size: 16px;
+            margin: 5px 0;
+            padding: 0;
+        }
 
         .link1 {
             display: inline-block;
-            background-color: #E1306C; /* Color para Instagram */
+            background-color: #E1306C;
             color: white;
             text-decoration: none;
-            padding: 12px 20px; /* Ajusta el relleno */
-            border-radius: 10px; /* Bordes redondeados */
-            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 16px;
         }
 
         .link {
             display: inline-block;
-            background-color: #25D366; /* Color para WhatsApp */
+            background-color: #25D366;
             color: white;
             text-decoration: none;
             padding: 10px 15px;
@@ -89,16 +89,12 @@ ul {
 
         .link2 {
             display: inline-block;
-            background-color: #1877F2; /* Color para Facebook */
+            background-color: #1877F2;
             color: white;
             text-decoration: none;
-            padding: 8px 25px;
-            border-radius: 8px;
-            font-size: 17px;
-        }
-
-        .link:hover {
-            background-color: #45a049;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
         @keyframes fadeIn {
@@ -110,14 +106,43 @@ ul {
             }
         }
 
-        ul {
-            
-            padding: 0;
-            margin: 0;
+        .no-bullet {
+            list-style-type: none;
         }
 
-        .no-bullet {
-            list-style-type: none; /* Elimina viñeta de este ítem */
+        /* Media Queries para dispositivos pequeños */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Cambia a diseño vertical */
+                padding: 20px; /* Reduce el espacio interno */
+            }
+
+            .logo {
+                max-width: 100px; /* Tamaño más pequeño para el logo */
+                margin-bottom: 20px; /* Añade separación debajo del logo */
+            }
+
+            h1 {
+                font-size: 20px; /* Reduce tamaño del título */
+            }
+
+            p {
+                font-size: 14px; /* Texto más pequeño */
+            }
+
+            ul {
+                font-size: 14px; /* Ajusta tamaño de la lista */
+            }
+
+            .link1, .link, .link2 {
+                font-size: 14px; /* Tamaño menor en botones */
+                padding: 8px 10px;
+            }
+
+            .buttons {
+                gap: 10px;
+                justify-content: center; /* Centra los botones en móviles */
+            }
         }
     </style>
 </head>
