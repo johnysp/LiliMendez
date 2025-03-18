@@ -18,27 +18,26 @@
 
         .container {
             background-color: #ffffff;
-            padding: 40px; /* Se reduce el padding en pantallas pequeñas */
-            border-radius: 20px; /* Bordes ajustados */
+            padding: 20px; /* Ajuste de padding */
+            border-radius: 20px;
             box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Ancho flexible */
-            max-width: 700px;
+            width: 90%; /* Ancho flexible */
+            max-width: 500px; /* Máximo ancho en pantallas grandes */
             animation: fadeIn 2s;
-            display: flex; /* Usamos flexbox */
-            align-items: center;
-            gap: 20px; /* Espacio entre elementos */
-            flex-wrap: wrap; /* Permite que los elementos se ajusten */
+            display: flex;
+            flex-direction: column; /* Organización vertical */
+            align-items: center; /* Centra los elementos horizontalmente */
+            gap: 20px; /* Espaciado uniforme entre elementos */
         }
 
         .logo {
-            max-width: 150px; /* Tamaño más pequeño para pantallas pequeñas */
+            max-width: 200px; /* Tamaño controlado del logo */
             height: auto;
-            margin-left: 0; /* Elimina margen negativo para evitar desplazamiento */
         }
 
         .content {
-            flex: 1; 
-            text-align: left;
+            width: 100%; /* Asegura que el contenido ocupe el ancho completo */
+            text-align: center; /* Centra el texto */
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -46,55 +45,53 @@
 
         .buttons {
             display: flex;
-            flex-wrap: wrap; /* Botones se ajustan a nueva línea si es necesario */
-            gap: 10px; /* Espaciado entre botones */
-            justify-content: center; /* Centra los botones en pantallas pequeñas */
+            flex-wrap: wrap; /* Botones se ajustan si es necesario */
+            justify-content: center; /* Centra los botones */
+            gap: 10px; /* Espaciado uniforme entre los botones */
+            width: 100%; /* Asegura que los botones ocupen el ancho completo */
         }
 
         h1 {
-            font-size: 24px; /* Ajusta tamaño del título en dispositivos pequeños */
+            font-size: 30px; /* Tamaño del título */
             margin-bottom: 5px;
         }
 
         p {
-            font-size: 16px; /* Reduce tamaño del texto */
+            font-size: 25px; /* Tamaño del texto */
             margin: 5px 0;
         }
 
         ul {
-            font-size: 16px;
+            font-size: 20px;
             margin: 5px 0;
             padding: 0;
+            list-style: none; /* Elimina viñetas */
         }
 
-        .link1 {
+        .link1, .link, .link2 {
             display: inline-block;
-            background-color: #E1306C;
-            color: white;
-            text-decoration: none;
+            text-align: center;
             padding: 10px 15px;
             border-radius: 10px;
             font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .link1 {
+            background-color: #E1306C; /* Color de Instagram */
         }
 
         .link {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 16px;
+            background-color: #25D366; /* Color de WhatsApp */
         }
 
         .link2 {
-            display: inline-block;
-            background-color: #1877F2;
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 16px;
+            background-color: #1877F2; /* Color de Facebook */
+        }
+
+        .link:hover {
+            opacity: 0.8;
         }
 
         @keyframes fadeIn {
@@ -110,38 +107,28 @@
             list-style-type: none;
         }
 
-        /* Media Queries para dispositivos pequeños */
+        /* Media Queries para pantallas pequeñas */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Cambia a diseño vertical */
-                padding: 20px; /* Reduce el espacio interno */
+                padding: 15px; /* Reduce padding en dispositivos pequeños */
+                gap: 15px;
             }
 
             .logo {
-                max-width: 100px; /* Tamaño más pequeño para el logo */
-                margin-bottom: 20px; /* Añade separación debajo del logo */
+                max-width: 100px; /* Logo más pequeño en dispositivos pequeños */
             }
 
             h1 {
-                font-size: 20px; /* Reduce tamaño del título */
+                font-size: 20px;
             }
 
-            p {
-                font-size: 14px; /* Texto más pequeño */
-            }
-
-            ul {
-                font-size: 14px; /* Ajusta tamaño de la lista */
+            p, ul {
+                font-size: 14px;
             }
 
             .link1, .link, .link2 {
-                font-size: 14px; /* Tamaño menor en botones */
+                font-size: 12px;
                 padding: 8px 10px;
-            }
-
-            .buttons {
-                gap: 10px;
-                justify-content: center; /* Centra los botones en móviles */
             }
         }
     </style>
@@ -162,11 +149,11 @@
                 <li>Venta de productos por catálogo:</li>
                 <li class="no-bullet">Terramar, Jafra, Natura, Farmaci, Mary Kay.</li>
             </ul>
-            <div class="buttons">
-                <a href="https://www.instagram.com/lilimendez_g?igsh=dDhoMjh2bnBpeDk4" class="link1">Instagram</a>
-                <a href="https://w.app/czw51b" class="link">WhatsApp</a>
-                <a href="https://www.facebook.com/share/1BFbtUDmfW/" class="link2">Facebook</a>
-            </div>
+        </div>
+        <div class="buttons">
+            <a href="https://www.instagram.com/lilimendez_g?igsh=dDhoMjh2bnBpeDk4" class="link1">Instagram</a>
+            <a href="https://w.app/czw51b" class="link">WhatsApp</a>
+            <a href="https://www.facebook.com/share/1BFbtUDmfW/" class="link2">Facebook</a>
         </div>
     </div>
 </body>
