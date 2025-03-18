@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta De Presentación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a548cd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 160px;
+            border-radius: 80px;
+            box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+            width: 150%; /* Ajustar para que el contenido no exceda del contenedor */
+            height: 100px;
+            max-width: 700px;
+            animation: fadeIn 2s;
+            display: flex; /* Usamos flexbox */
+            align-items: center; /* Alineación vertical */
+            gap: 30px; /* Espacio entre elementos */
+        }
+
+        .logo {
+            max-width: 350px; /* Tamaño ajustado para mantener proporción */
+            height: auto;
+            margin-left: -130px; /* Mueve el logo más a la izquierda */
+        }
+
+        .content {
+            flex: 1; /* El contenido ocupará el resto del espacio */
+            text-align: left; /* Alinear texto a la izquierda */
+            display: flex; /* Flexbox para los botones */
+            flex-direction: column; /* Elementos en columna para texto */
+            gap: 20px; /* Espacio entre bloques de contenido */
+        }
+
+        .buttons {
+            display: flex; /* Flexbox para alinear los botones en fila */
+            justify-content: flex-start; /* Alineación a la izquierda */
+            gap: 15px; /* Espaciado entre los botones */
+        }
+
+
+        h1 {
+    font-size: 36px; /* Tamaño del título */
+    margin-bottom: 5px; /* Reduce espacio debajo del título */
+}
+
+p {
+    font-size: 18px; /* Tamaño del texto */
+    margin: 5px 0; /* Reduce espacio arriba y abajo del párrafo */
+}
+
+ul {
+    font-size: 18px; /* Tamaño de los elementos de la lista */
+    margin: 5px 0; /* Reduce espacio entre la lista y otros elementos */
+    padding: 0; /* Elimina sangría inicial de la lista */
+}
+
+        .link1 {
+            display: inline-block;
+            background-color: #E1306C; /* Color para Instagram */
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px; /* Ajusta el relleno */
+            border-radius: 10px; /* Bordes redondeados */
+            font-size: 18px;
+        }
+
+        .link {
+            display: inline-block;
+            background-color: #25D366; /* Color para WhatsApp */
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .link2 {
+            display: inline-block;
+            background-color: #1877F2; /* Color para Facebook */
+            color: white;
+            text-decoration: none;
+            padding: 8px 25px;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .link:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        ul {
+            
+            padding: 0;
+            margin: 0;
+        }
+
+        .no-bullet {
+            list-style-type: none; /* Elimina viñeta de este ítem */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="2.png" alt="Logo Empresa" class="logo">
+        <div class="content">
+            <h1>Lili Mendez</h1>
+            <p>Aquí podrás encontrar los siguientes servicios:</p>
+            <ul>
+                <li>Pedicura spa</li>
+                <li>Uñas acrílicas</li>
+                <li>Dry manicura</li>
+                <li>Esmalte semipermanente</li>
+                <li>Press ON</li>
+                <li>Técnica de balance</li>
+                <li>Venta de productos por catálogo:</li>
+                <li class="no-bullet">Terramar, Jafra, Natura, Farmaci, Mary Kay.</li>
+            </ul>
+            <div class="buttons">
+                <a href="https://www.instagram.com/lilimendez_g?igsh=dDhoMjh2bnBpeDk4" class="link1">Instagram</a>
+                <a href="https://w.app/czw51b" class="link">WhatsApp</a>
+                <a href="https://www.facebook.com/share/1BFbtUDmfW/" class="link2">Facebook</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
